@@ -41,10 +41,14 @@ public class hello {
     }
 
     @GetMapping(value = "/news/{id}")
-    public String getFoosBySimplePathWithPathVariable(@PathVariable("id") long id){
+    public String getFoosBySimplePathWithPathVariable(@PathVariable("id") int  id, Model model){
+        Article article = articleRepository.findArticleById(id);
+        String arttitle = article.getTitle();
+        String artcontent = article.getContent();
+        model.addAttribute("arttitle",arttitle);
+        model.addAttribute("artcontent",artcontent);
         return "fullnews";
     }
-//add file fullnews.html
 
 
 

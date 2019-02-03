@@ -11,4 +11,5 @@ public interface ArticleRepository extends CrudRepository<Article, Integer> {
         List<Article> findArticleByTag(String Tag);
         Article findArticleById(int id);
 
+
 }
