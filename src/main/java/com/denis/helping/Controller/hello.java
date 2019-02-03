@@ -8,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.jws.WebParam;
-import java.util.List;
 
 @Controller
 public class hello {
@@ -43,11 +41,10 @@ public class hello {
     }
 
     @GetMapping(value = "/news/{id}")
-    public String getFoosBySimplePathWithPathVariable(
-            @PathVariable("id") long id){
-        return "news";
+    public String getFoosBySimplePathWithPathVariable(@PathVariable("id") long id){
+        return "fullnews";
     }
-
+//add file fullnews.html
 
 
 
