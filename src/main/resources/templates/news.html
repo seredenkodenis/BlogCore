@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+<form method="post">
+    <input type="text" name="tag"/>
+</form>
+<ul>
+    <th  th:each="article : ${articles}">
+        <li th:text="${article.id}"></li>
+        <li th:text="${article.title}"></li>
+        <li th:text="${article.content}"></li>
+        <li th:text="${article.tag}"></li>
+    </th>
+</ul>
+<p th:text="${alert}"/>
+</body>
+</html>
