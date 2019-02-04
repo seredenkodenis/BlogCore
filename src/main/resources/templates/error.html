@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:spring="http://java.sun.com/xml/ns/javaee">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -8,8 +8,8 @@
 
 
     <title>404 ERROR</title>
-    //HERE IS MAIN PROBLEM!!!!!!!!!!!!!!!!
-    <link href="/errorstyle.css">
+
+    <link rel="stylesheet" th:href="@{/style.css}">
 
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">

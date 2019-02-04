@@ -27,7 +27,7 @@ public class hello {
 
 
 
-    @GetMapping
+    @GetMapping("/")
     public String mainpage(Model model){
         return "main";
     }
