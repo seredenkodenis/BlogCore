@@ -27,7 +27,7 @@ public class hello {
 
 
 
-    @GetMapping("/")
+    @GetMapping("/main")
     public String mainpage(Model model){
         return "main";
     }
@@ -102,6 +102,17 @@ public class hello {
         return "/news";
     }
 
+    @GetMapping("/delete")
+    public String delete(Model model){
+        return "delete";
+    }
+
+    @PostMapping("/delete")
+    public String delete(@RequestParam Integer id){
+        Article article = articleRepository.findArticleById(id);
+        articleRepository.delete(article);
+        return "delete";
+    }
 }
 
 
